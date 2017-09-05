@@ -18,7 +18,11 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <input type="text" id="firstName">
+        First: <input class="salaryInput" type="text" id="firstName">
+        Last: <input class="salaryInput" type="text" id="lastName">
+        Title: <input class="salaryInput" type="text" id="jobTitle">
+        Id: <input class="salaryInput" type="number" id="employeeId">
+        Salary: <input class="salaryInput" type="number" id="salary">
         <button id="submitButton">Submit</button>
 
         <h2>Employee Data</h2>
@@ -26,6 +30,10 @@
             <thead>
                 <tr>
                     <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Job Title</th>
+                    <th>id</th>
+                    <th>Salary</th>
                 </tr>
             </thead>
             <tbody id="employeeData">
