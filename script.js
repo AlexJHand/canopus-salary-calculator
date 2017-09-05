@@ -1,3 +1,5 @@
+var totalSalary = 0;
+
 $(document).ready(function(){
     console.log('jquery sourced.');
 
@@ -20,6 +22,18 @@ $(document).ready(function(){
 
         var salary = $('#salary').val();
         $row.append('<td>' + salary + '</td>');
+
+        console.log(salary);
+        console.log(parseInt(salary));
+        console.log(parseFloat(salary));
+        var salaryNumber = parseFloat(salary);
+        totalSalary = totalSalary + salaryNumber;
+
+        var monthlyAverage = totalSalary / 12;
+        // Limit to two decimals
+        monthlyAverage = Math.floor(monthlyAverage * 100) / 100; // Also look at toFixed
+        // append the monthly average to the DOM
+        $('#averageTotal').html('<strong>' + monthlyAverage + '</strong>');
 
         // Put the row on the DOM
         $('#employeeData').append($row);
