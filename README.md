@@ -7,5 +7,5 @@
 - [x] Append that name to the DOM in a HTML table
 - [x] Add id, job title, salary and last name
 - [x] Salary total calculation
-- [ ] Refactor the code into functions
+- [x] Refactor the code into functions
 - [ ] Ability to remove a user
