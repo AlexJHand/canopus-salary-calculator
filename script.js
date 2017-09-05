@@ -17,6 +17,17 @@ $(document).ready(function(){
         // Clear all values
         $('.salaryInput').val('');
     });
+
+    $('#employeeData').on('click', '.deleteButton', function(){
+        console.log('Employee id:', $(this).data('eid'));
+        // Remove item from the array
+        // displayAllPeople();
+        // compute the average
+
+        // OR
+
+        // $(this).parent().parent().remove(); // to remove the row
+    });
 });
 
 function displayAllPeople() {
@@ -33,6 +44,8 @@ function displayAllPeople() {
         $row.append('<td>' + person.id + '</td>');
         $row.append('<td>' + person.salary + '</td>');
 
+        var $deleteButton = $('<td><button class="deleteButton" data-eid="' + person.id + '">Remove</button></td>');
+        $row.append($deleteButton);
         var salaryNumber = parseFloat(person.salary);
         totalSalary = totalSalary + salaryNumber;
 
